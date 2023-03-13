@@ -23,3 +23,21 @@ var swiper = new Swiper(".swiperbanner", {
     clickable: true,
   },
 });
+// MENU SLIDER
+
+var swiper = new Swiper(".menuSlider", {
+  navigation: {
+    nextEl: ".custom-swiper-button-next",
+    prevEl: ".custom-swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+  slidesPerView: "auto",
+  spaceBetween: 14,
+});
+$(".nav .nav-item a").click(function () {
+  $(".nav .nav-item a").removeClass("active");
+  $(this).addClass("active");
+});
